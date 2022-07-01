@@ -1,0 +1,32 @@
+.crearmedicamento-page {
+    background-color: white;
+    background-position: center center;
+    background-size: cover;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.crearmedicamento-card-body,
+.crearmedicamento-box {
+    background-image: url('../../../assets/dist/img/fondo-plomo.jpg');
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+.crearmedicamento-box,
+a {
+    color: white;
+}
+
+.social-auth-links,
+a {
+    color: black;
+}
+
+.link-reg {
+    color: white;
+}

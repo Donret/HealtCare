@@ -1,0 +1,91 @@
+<div class="hold-transition register-page">
+    <div class="register-box animate__animated animate__backInLeft">
+        <div class="register-logo">
+            <a href="../../index2.html"><b>Health</b>Care</a>
+        </div>
+
+        <div class="card ">
+            <div class="card-body register-card-body">
+                <p class="login-box-msg">Registrar un nuevo usuario</p>
+
+                <form (ngSubmit)="onRegister()" [formGroup]="registerForm">
+                    <!--Entradas de nombre-->
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="nombre" placeholder="Nombres" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="apellido" class="form-control" formControlName="apellido" placeholder="Apellidos" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Entradas de nombre-->
+                    <!--Entrada datos institucionales-->
+                    <div class="input-group mb-3">
+                        <input type="institucion" class="form-control" formControlName="institucion" placeholder="Institución" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="IdInstitucional" class="form-control" formControlName="IdInstitucional" placeholder="IdInstitucional" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Entrada datos institucionales-->
+
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope" style="color: rgb(48, 37, 37);"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <select type="Rol" class="form-control" name="Rol" id="Rol" formControlName="Rol" placeholder="Seleccione su Rol">
+                        
+                        <option value="0">Enfermero(a)</option>
+                        <option value="1">Jefe de enfermería</option>
+                        <option value="2">Administrador(a) IPS</option>
+                    </select>
+               
+                    <div class="row">
+                        <div class="col-8">
+                            
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-outline-secondary btn-block" [disabled]="registerForm.invalid">Registrar</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+
+                <a routerLink="/login" class="text-center link-reg">De hecho ya tengo un usuario existente</a>
+            </div>
+            <!-- /.form-box -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+</div>

@@ -1,0 +1,81 @@
+<div class="hold-transition crearmedicamento-page">
+    <div class="crearmedicamento-box animate__animated animate__backInLeft">
+        <div class="crearmedicamento-logo">
+            <a href="../../index2.html"><b>Health</b>Care</a>
+        </div>
+
+        <div class="card ">
+            <div class="card-body crearmedicamento-card-body">
+                <p class="login-box-msg">Registre el historial medico del paciente</p>
+
+                <form  (ngSubmit)="onCrear()" [formGroup]="crearmedicamentoForm">
+                    <!--Entradas de nombre-->
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="nombremedicamento" placeholder="Nombre del medicamento">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="Lote" class="form-control" formControlName="Lote" placeholder="Identificador unico del Lote">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="Proveedor" placeholder="Proveedor del medicamento">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="unidad" class="form-control" formControlName="Cantidad_Und" placeholder="Las unidades del medicamento que contiene el Lote">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a>Ingrese la fecha de compra</a>
+                    <div class="input-group mb-3">
+                        <mat-form-field appearance="fill">
+                            <input matInput [matDatepicker]="picker1" type="Fecha" name="Fecha" id="Fecha" formControlName="fechaCompra">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <a>Ingrese la fecha de vencimiento</a>
+                    <div class="input-group mb-3">
+                        <mat-form-field appearance="fill">
+                            <input matInput [matDatepicker]="picker2" type="Fecha" name="Fecha" id="Fecha" formControlName="fechaVencimiento">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-outline-secondary btn-block" [disabled]="crearmedicamentoForm.invalid">Registrar</button>
+                        </div>
+                        <!-- /.col -->  
+                    </div>
+                </form>
+            </div>
+            <!-- /.form-box -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+</div>

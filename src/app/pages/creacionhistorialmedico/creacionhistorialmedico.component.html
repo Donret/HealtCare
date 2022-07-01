@@ -1,0 +1,95 @@
+<div class="hold-transition creacionhistorialmedico-page">
+    <div class="creacionhistorialmedico-box animate__animated animate__backInLeft">
+        <div class="creacionhistorialmedico-logo">
+            <a href="../../index2.html"><b>Health</b>Care</a>
+        </div>
+
+        <div class="card ">
+            <div class="card-body creacionhistorialmedico-card-body">
+                <p class="login-box-msg">Registre el historial medico del paciente</p>
+
+                <form  (ngSubmit)="onCrear()" [formGroup]="crearhistorialForm">
+                    <!--Entradas de nombre-->
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="nombrepaciente" placeholder="nombre del paciente" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="CausaActual" placeholder="Causa de ingreso actual" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="Ubicacion" placeholder="Cama en la que se encuentra el paciente" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="nombre" class="form-control" formControlName="EstadoPaciente" placeholder="Estado o datos relevantes sobre el paciente" required >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <select type="Antecedente" class="form-control" name="Antecedente" id="Antecedente" formControlName="Antecedente">
+                            <option value=''disabled selected>Seleccione</option>
+                            <option value="0">Asma</option>
+                            <option value="1">Problemas de Corazón</option>
+                            <option value="2">Anemia o transtornos sanguíneos</option>
+                            <option value="3">Tumor, neoplastia anormal</option>
+                            <option value="4">ITS/ETS/VPH</option>
+                            <option value="5">Glaucoma</option>
+                            <option value="6">Epilepsia, convulsiones</option>
+                            <option value="7">Problemas de visión</option>
+                            <option value="8">Infecciones virales</option>
+                            <option value="9">Urticaria, fiebre del heno</option>
+                            <option value="10">Transtornos neurologicos</option>
+                            <option value="11">Transtornos psiquiatricos</option>
+                            <option value="12">Úlcera de estómago duodenal</option>
+                            <option value="13">Enfisema o sarcoidosis</option>
+                            <option value="14">Tuberculosis, sarampión, varicela</option>
+                            <option value="15">Enfermedad Hepática</option>
+                            <option value="16">Deficiencia hormonal</option>
+                            <option value="17">No cuenta con nada de lo anterior</option>
+                        </select>
+                    </div>
+                    <a>Ingrese la fecha de hospitalización</a>
+                    <div class="input-group mb-3">
+                        <mat-form-field appearance="fill" type="fecha" class="fecha" name="fecha" id="fecha" formControlName="fecha" required>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-outline-secondary btn-block" [disabled]="crearhistorialForm.invalid">Registrar</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+            </div>
+            <!-- /.form-box -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+</div>

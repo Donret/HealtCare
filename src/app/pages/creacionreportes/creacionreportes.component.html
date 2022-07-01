@@ -1,0 +1,50 @@
+<div class="hold-transition creacionreportes-page">
+  <div class="creacionreportes-box animate__animated animate__backInLeft">
+      <div class="creacionreportes-logo">
+          <a href="../../index2.html"><b>Health</b>Care</a>
+      </div>
+
+      <div class="card ">
+          <div class="card-body creacionreportes-card-body">
+              <p class="login-box-msg">Crear una nueva actividad</p>
+
+              <form  (ngSubmit)="onCrear()" [formGroup]="creacionreportesForm">
+                  <!--Entradas de nombre-->
+                  <div class="input-group mb-3">
+                    <select type="Medicamento" class="form-control" name="Medicamento" id="Medicamento" formControlName="Medicamento">
+                      <option value=''disabled selected>Seleccione Medicamento</option>
+                      <option *ngFor="let medicamento of Medicamentos" [value]="medicamento.nombremedicamento">{{medicamento.nombremedicamento}}</option>
+                  </select>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="Razon" class="form-control" formControlName="Razon" placeholder="Razon" required >
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                          <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="Urgencia" class="form-control" formControlName="Urgencia" placeholder="Urgencia" required >
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-lock" style="color: rgb(48, 37, 37);;"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                            
+                    </div>
+                    <div class="col-4">
+                      <button type="submit" class="btn btn-outline-secondary btn-block" [disabled]="creacionreportesForm.invalid">Reportar</button>
+                    </div>         
+                  </div>
+              </form>
+          </div>
+          <!-- /.form-box -->
+      </div>
+      <!-- /.card -->
+  </div>
+  <!-- /.register-box -->
+</div>
